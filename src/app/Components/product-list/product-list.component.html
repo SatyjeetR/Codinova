@@ -1,0 +1,155 @@
+<!-- tatal container  -->
+<div class="container">
+  <!-- cart  -->
+  <div class="cart">
+    <!-- scrollable-content -->
+    <div class="scrollable-content">
+      <table class="fixed-header">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="!selectedProduct && cartItems.length === 0">
+            <p class="empty-cart-message">THERE ARE NO PRODUCTS</p>
+          </ng-container>
+          <tr *ngFor="let item of cartItems">
+            <td>
+              <div class="product-info">
+                <button class="delete-button" (click)="deleteItem(item)">X</button>
+                <p>{{ item.name }}</p>
+              </div>
+            </td>
+            <td>{{ item.price }}</td>
+            <td>
+              <button (click)="increaseQuantity(item)">+</button>
+              <span>{{ item.quantity }}</span>
+              <button (click)="decreaseQuantity(item)">-</button>
+            </td>
+            <td>{{ calculateItemTotal(item) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bottom-content">
+      <table>
+        <tr>
+          <th style="text-align: left;">Sub Total:</th>
+          <td>{{ calculateSubTotal() | number: '1.2-2' }} EUR</td>
+          <td>{{ totalItems }} items</td>
+        </tr>
+        <tr>
+          <th style="text-align: left;">VAT Tax:</th>
+          <td>
+            <input style="width: 30px;" type="number" [(ngModel)]="vat" (change)="updateValues()" />
+         
+            
+            %
+          </td>
+          <td>{{ (vat / 100 * subTotal) | number: '1.2-2' }} EUR</td>
+        </tr>
+        <tr>
+          <th style="text-align: left;">Discount:</th>
+          <td>
+            <input style="width: 30px;" type="number" [(ngModel)]="discount" (change)="updateValues()">
+            %
+          </td>
+          <td>{{ (discount / 100 * subTotal) | number: '1.2-2' }} EUR</td>
+        </tr>
+        <tr>
+          <th style="text-align: left;">Total:</th>
+          <td style="color: green;" colspan="2">
+            {{
+            subTotal +
+            (vat / 100 * subTotal) -
+            (discount / 100 * subTotal) |
+            number: '1.2-2'
+            }}
+            EUR
+          </td>
+        </tr>
+      </table>
+      <div class="sale-buttons">
+        <button (click)="cancelSale()" class="cancel-button">CANCEL SALE</button>
+        <button (click)="processSale()" class="process-button">PROCESS SALE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- product-items -->
+  <div class="product-list">
+    <div class="product-item" *ngFor="let product of products" (click)="addToCart(product)">
+
+      <div>
+        <div class="image-container" (mouseover)="showProductInfo(product)" (mouseout)="hideProductInfo()">
+          <h5>{{ product.name }}</h5>
+          <img [src]="product.image" alt="Product Image" />
+          <div class="hover-info" *ngIf="product === hoveredProduct">
+            <p>Price: {{ product.price }}</p>
+            <p>Description: {{ product.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-info" *ngIf="product === selectedProduct">
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- popup massage  -->
+<div class="popup" *ngIf="showPopup">
+  <table>
+    <tr>
+      <th>
+        <div class="receipt-heading">
+          <h5>Receipt</h5>
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+    </tr>
+    <tr *ngFor="let item of cartItems">
+      <td>{{ item.name }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ calculateItemTotal(item) }}</td>
+    </tr>
+    <tr>
+      <td>Total Items:</td>
+      <td>{{ totalItems }} Total</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Price Discount:</td>
+      <td></td>
+      <td>{{ (discount / 100) * subTotal | number: '1.2-2' }} EUR</td>
+    </tr>
+    <tr>
+      <td>VAT Tax:</td>
+      <td></td>
+      <td>{{ (vat / 100) * subTotal | number: '1.2-2' }} EUR</td>
+    </tr>
+    <tr>
+      <td>Total:</td>
+      <td></td>
+      <td style="color: green;">
+        {{
+        subTotal +
+        (vat / 100) * subTotal -
+        (discount / 100) * subTotal |
+        number: '1.2-2'
+        }}
+        EUR
+      </td>
+    </tr>
+  </table>
+  <button (click)="closePopup()" style="width: 100%;">Close</button>
+</div>

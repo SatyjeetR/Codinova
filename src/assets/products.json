@@ -1,0 +1,196 @@
+{
+    "DataList": [
+        {
+            "id": "1",
+            "name": "COMPUTER",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/_success_tick_icon.png",
+            "gbc":"background-color: rgb(0, 0, 84);"
+        },
+        {
+            "id": "2",
+            "name": "CAVIAR",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-1.png"
+        },
+        {
+            "id": "3",
+            "name": "SWEATER",
+            "price": "46",
+            "category": "Clothing",
+            "description": "fashion, tie, clothes, accessory , accessoire,...",
+            "image": "../../../assets/Images/icon-2.png"
+        },
+        {
+            "id": "4",
+            "name": "TIE",
+            "price": "190",
+            "category": "Clothing",
+            "description": "winter jacket ",
+            "image": "../../../assets/Images/icon-2.png"
+        },
+        {
+            "id": "5",
+            "name": "JACKET",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/icon-4.png"
+        },
+        {
+            "id": "6",
+            "name": "JACKETMEN",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-10.png"
+        },
+        {
+            "id": "7",
+            "name": "GRAPES",
+            "price": "46",
+            "category": "Clothing",
+            "description": "fashion, tie, clothes, accessory , accessoire,...",
+            "image": "../../../assets/Images/icon-11.png"
+        },
+        {
+            "id": "8",
+            "name": "STRAWBERRIES",
+            "price": "190",
+            "category": "Clothing",
+            "description": "winter jacket ",
+            "image": "../../../assets/Images/icon-12.png"
+        },
+        {
+            "id": "9",
+            "name": "APPLE",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "10",
+            "name": "ORANGE",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "11",
+            "name": "KIWI",
+            "price": "46",
+            "category": "Clothing",
+            "description": "fashion, tie, clothes, accessory , accessoire,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "12",
+            "name": "OMUSE",
+            "price": "190",
+            "category": "Clothing",
+            "description": "winter jacket ",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "13",
+            "name": "KEYBOARD",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "14",
+            "name": "HEADPHONE",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "15",
+            "name": "MOTHERBOARD",
+            "price": "46",
+            "category": "Clothing",
+            "description": "fashion, tie, clothes, accessory , accessoire,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "16",
+            "name": "NOTEBOOK",
+            "price": "190",
+            "category": "Clothing",
+            "description": "winter jacket ",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "17",
+            "name": "COMPUTER REPAIR",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "18",
+            "name": "GIFT FOLDING",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "19",
+            "name": "CLOTHING",
+            "price": "46",
+            "category": "Clothing",
+            "description": "fashion, tie, clothes, accessory , accessoire,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "20",
+            "name": "NIVEA POCKET",
+            "price": "190",
+            "category": "Clothing",
+            "description": "winter jacket ",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "21",
+            "name": "NIVEA POCKET BLEU",
+            "price": "130",
+            "category": "computers",
+            "description": "",
+            "image": "../../../assets/Images/icon-2.png"
+
+        },
+        {
+            "id": "22",
+            "name": "CHILL HOT PIZZA",
+            "price": "1",
+            "category": "Clothing",
+            "description": "fashion, clothes , sweater, wool, cardigan,...",
+            "image": "../../../assets/Images/icon-2.png"
+
+        }
+        
+    ]
+}
